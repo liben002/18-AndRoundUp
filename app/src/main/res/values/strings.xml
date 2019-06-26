@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Slave</string>
+
+    <!-- strings for MainActivity.java -->
+    <string name="enterBillTotalLabel">Enter the total for the bill: </string>
+    <string name="enterAmountOfPeople">Enter the amount of people to split: </string>
+    <string name="hint">Value</string>
+    <string name="workButton">Work</string>
+
+    <!-- strings for ResultActivity.java -->
+    <string name="amountOfEach">Each person pays: </string>
+    <string name="writeTip">Write for the Tip: </string>
+    <string name="tip">Tip</string>
+    <string name="result">Result</string>
 </resources>
