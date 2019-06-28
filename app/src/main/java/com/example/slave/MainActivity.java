@@ -1,27 +1,25 @@
 package com.example.slave;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText billTotal;
     private EditText amountOfPeople;
-    private Button workButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        Button workButton;
         billTotal = findViewById(R.id.billTotal);
         amountOfPeople = findViewById(R.id.amountOfPeople);
         workButton = findViewById(R.id.workButton);
@@ -58,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Intent i = new Intent(MainActivity.this, Result.class);
         i.putExtra("amountEach", String.valueOf(amountOfEach));
-        i.putExtra("writeTip", String.format("%.2f",writeTip));
+        i.putExtra("writeTip", String.format(Locale.US,"%.2f",writeTip));
         startActivity(i);
 
     }
